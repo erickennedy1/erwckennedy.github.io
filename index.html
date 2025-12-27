@@ -26,23 +26,26 @@
     .card {
       background: #111113;
       border-radius: 16px;
-      padding: 48px 40px;
-      max-width: 420px;
+      padding: 40px;
+      max-width: 460px;
       width: 100%;
-      text-align: center;
       box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6);
+      overflow-y: auto;
+      max-height: 85vh;
     }
 
     h1 {
       margin: 0;
-      font-size: 2.2rem;
+      font-size: 2.1rem;
       font-weight: 600;
+      text-align: center;
     }
 
     .subtitle {
       margin-top: 8px;
       color: #a1a1aa;
       font-size: 0.95rem;
+      text-align: center;
     }
 
     .bio {
@@ -50,18 +53,66 @@
       font-size: 0.95rem;
       line-height: 1.6;
       color: #d4d4d8;
+      text-align: center;
     }
 
-    .links a {
-      margin: 0 10px;
-      color: #5865f2;
-      text-decoration: none;
+    section {
+      margin-top: 32px;
+    }
+
+    section h2 {
+      font-size: 0.9rem;
+      color: #a1a1aa;
+      margin-bottom: 16px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    /* STACK */
+    .stack {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .badge {
+      padding: 6px 12px;
+      font-size: 0.75rem;
+      border-radius: 999px;
+      background: #1c1c1f;
+      color: #d4d4d8;
+    }
+
+    /* PROJETOS */
+    .projects {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .project {
+      padding: 14px;
+      background: #1a1a1d;
+      border-radius: 12px;
+      transition: transform 0.2s ease, background 0.2s ease;
+      cursor: pointer;
+    }
+
+    .project:hover {
+      transform: translateY(-2px);
+      background: #202024;
+    }
+
+    .project-title {
+      font-size: 0.9rem;
       font-weight: 500;
-      font-size: 0.95rem;
+      margin-bottom: 4px;
     }
 
-    .links a:hover {
-      text-decoration: underline;
+    .project-desc {
+      font-size: 0.75rem;
+      color: #a1a1aa;
+      line-height: 1.4;
     }
 
     /* CARD DA MÚSICA */
@@ -78,3 +129,94 @@
 
     .music-title {
       font-size: 0.75rem;
+      color: #a1a1aa;
+      margin-bottom: 8px;
+    }
+
+    .music-card iframe {
+      border: none;
+      border-radius: 12px;
+    }
+
+    /* MOBILE */
+    @media (max-width: 768px) {
+      body {
+        overflow: auto;
+      }
+
+      .music-card {
+        display: none;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- CARD DA MÚSICA -->
+  <div class="music-card">
+    <div class="music-title">🎧 Listening</div>
+    <iframe
+      src="https://open.spotify.com/embed/track/6K4t31amVTZDgR3sKmwUJJ?theme=0"
+      width="100%"
+      height="152"
+      allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+      loading="lazy">
+    </iframe>
+  </div>
+
+  <!-- CARD PRINCIPAL -->
+  <div class="card">
+    <h1>Eric Kennedy</h1>
+    <p class="subtitle">Desenvolvedor Full Stack & Jogos</p>
+
+    <p class="bio">
+      Desenvolvedor full stack apaixonado por programação e jogos.
+      Crio mini-jogos e aplicações completas, sempre buscando unir
+      lógica, criatividade e boas práticas.
+    </p>
+
+    <!-- STACK -->
+    <section>
+      <h2>Stack</h2>
+      <div class="stack">
+        <span class="badge">JavaScript</span>
+        <span class="badge">TypeScript</span>
+        <span class="badge">Node.js</span>
+        <span class="badge">React</span>
+        <span class="badge">HTML</span>
+        <span class="badge">CSS</span>
+        <span class="badge">Unity</span>
+        <span class="badge">C#</span>
+      </div>
+    </section>
+
+    <!-- PROJETOS -->
+    <section>
+      <h2>Projetos</h2>
+      <div class="projects">
+        <div class="project">
+          <div class="project-title">Mini Game Platformer</div>
+          <div class="project-desc">
+            Jogo 2D criado em Unity focado em mecânicas simples e polish visual.
+          </div>
+        </div>
+
+        <div class="project">
+          <div class="project-title">API Full Stack</div>
+          <div class="project-desc">
+            API REST com autenticação, banco de dados e dashboard web.
+          </div>
+        </div>
+
+        <div class="project">
+          <div class="project-title">Shorts com IA</div>
+          <div class="project-desc">
+            Pipeline automatizado para criação de vídeos curtos usando IA.
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+</body>
+</html>
