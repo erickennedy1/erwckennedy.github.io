@@ -214,14 +214,51 @@ body {
 }
 
 /* ================================
+   LAYOUT PRINCIPAL
+================================ */
+.project-main {
+  margin-bottom: 40px;
+}
+
+.project-main--split {
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  gap: 40px;
+  align-items: start;
+}
+
+.project-image-wrapper {
+  animation: fadeUp 0.6s var(--transition-slow) 0.1s both;
+}
+
+.project-image-wrapper--vertical {
+  position: sticky;
+  top: 24px;
+}
+
+.project-info {
+  animation: fadeUp 0.6s var(--transition-slow) 0.2s both;
+}
+
+.project-main--split .project-info .project-section {
+  margin-bottom: 32px;
+}
+
+.project-main--split .project-links {
+  margin-top: 16px;
+}
+
+/* ================================
    IMAGEM PRINCIPAL
 ================================ */
 .project-cover {
   width: 100%;
   border-radius: var(--radius-lg);
-  margin-bottom: 20px;
   border: 1px solid var(--border);
-  animation: fadeUp 0.6s var(--transition-slow) 0.1s both;
+}
+
+.project-main:not(.project-main--split) .project-cover {
+  margin-bottom: 20px;
 }
 
 .project-cover-placeholder {
@@ -229,13 +266,11 @@ body {
   height: 300px;
   background: linear-gradient(135deg, var(--bg-card) 0%, var(--bg-secondary) 100%);
   border-radius: var(--radius-lg);
-  margin-bottom: 20px;
   border: 1px solid var(--border);
   display: flex;
   align-items: center;
   justify-content: center;
   font-size: 5rem;
-  animation: fadeUp 0.6s var(--transition-slow) 0.1s both;
 }
 
 /* ================================
@@ -434,8 +469,15 @@ body {
     font-size: 1.75rem;
   }
 
-  .project-icon {
-    font-size: 3rem;
+  .project-main--split {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .project-image-wrapper--vertical {
+    position: static;
+    max-width: 200px;
+    margin: 0 auto;
   }
 
   .project-links {
