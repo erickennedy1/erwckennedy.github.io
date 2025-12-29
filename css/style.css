@@ -254,34 +254,39 @@ body {
 /* ================================
    SEÇÃO PROJETOS
 ================================ */
-.section-container {
-  width: 100%;
-  max-width: 1100px;
-  max-height: 100vh;
+
+/* Seção projetos - scroll na seção inteira */
+#projects {
   overflow-y: auto;
-  padding: 80px 40px 40px;
+  align-items: flex-start;
 
   /* Scrollbar minimalista - Firefox */
   scrollbar-width: thin;
   scrollbar-color: var(--border-light) transparent;
 }
 
-/* Scrollbar minimalista - Chrome, Safari, Opera */
-.section-container::-webkit-scrollbar {
+#projects::-webkit-scrollbar {
   width: 6px;
 }
 
-.section-container::-webkit-scrollbar-track {
+#projects::-webkit-scrollbar-track {
   background: transparent;
 }
 
-.section-container::-webkit-scrollbar-thumb {
+#projects::-webkit-scrollbar-thumb {
   background: var(--border);
   border-radius: var(--radius-full);
 }
 
-.section-container::-webkit-scrollbar-thumb:hover {
+#projects::-webkit-scrollbar-thumb:hover {
   background: var(--border-light);
+}
+
+.section-container {
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 80px 40px 40px;
 }
 
 .back-btn {
