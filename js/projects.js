@@ -175,6 +175,42 @@ const PROJECTS = [
         "assets/images/projects/familia-folhas/screenshot-5.jpg"
       ]
     }
+  },
+  {
+    id: "mk-tryon-lab",
+    title: "mK Try-On Lab",
+    description: "Provador virtual com IA para experimentar roupas, óculos, joias, bonés e tênis. Gera imagens realistas usando inteligência artificial.",
+    icon: "👗",
+    image: "assets/images/projects/mk-tryon-lab/cover.png",
+    tags: ["Vue 3", "Tailwind", "Replicate API", "Face-API"],
+    github: null,
+    demo: null,
+    details: {
+      fullDescription: `
+        mK Try-On Lab é uma plataforma de provador virtual com IA desenvolvida para a Metakosmos.
+        Permite que usuários experimentem roupas, óculos, joias, bonés e tênis virtualmente
+        usando inteligência artificial para gerar imagens realistas.
+
+        A plataforma suporta múltiplas marcas e categorias de produtos, oferecendo uma
+        experiência de compra imersiva e interativa para o e-commerce de moda.
+        Projeto desenvolvido com código proprietário.
+      `,
+      features: [
+        "Prova virtual de roupas com IA generativa",
+        "Experimentação de óculos e acessórios",
+        "Visualização de joias (colares, brincos, anéis)",
+        "Prova de bonés e chapéus",
+        "Visualização de tênis nos pés",
+        "Suporte a múltiplas marcas (Animale, Maria Filó, Renner, C&A)",
+        "Integração com Replicate API para geração de imagens",
+        "Detecção facial com Face-API.js"
+      ],
+      images: [
+        "assets/images/projects/mk-tryon-lab/screenshot-1.png",
+        "assets/images/projects/mk-tryon-lab/screenshot-2.png",
+        "assets/images/projects/mk-tryon-lab/screenshot-3.png"
+      ]
+    }
   }
 
   // Adicione mais projetos aqui seguindo a mesma estrutura
