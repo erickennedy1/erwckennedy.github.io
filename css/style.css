@@ -261,13 +261,27 @@ body {
   overflow-y: auto;
   padding: 80px 40px 40px;
 
-  /* Esconde scrollbar mas mantém funcionalidade */
-  scrollbar-width: none; /* Firefox */
-  -ms-overflow-style: none; /* IE/Edge */
+  /* Scrollbar minimalista - Firefox */
+  scrollbar-width: thin;
+  scrollbar-color: var(--border-light) transparent;
 }
 
+/* Scrollbar minimalista - Chrome, Safari, Opera */
 .section-container::-webkit-scrollbar {
-  display: none; /* Chrome, Safari, Opera */
+  width: 6px;
+}
+
+.section-container::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.section-container::-webkit-scrollbar-thumb {
+  background: var(--border);
+  border-radius: var(--radius-full);
+}
+
+.section-container::-webkit-scrollbar-thumb:hover {
+  background: var(--border-light);
 }
 
 .back-btn {
