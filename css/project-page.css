@@ -39,6 +39,28 @@
 
 html {
   scroll-behavior: smooth;
+
+  /* Scrollbar minimalista - Firefox */
+  scrollbar-width: thin;
+  scrollbar-color: var(--border-light) transparent;
+}
+
+/* Scrollbar minimalista - Chrome, Safari, Opera */
+html::-webkit-scrollbar {
+  width: 6px;
+}
+
+html::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+html::-webkit-scrollbar-thumb {
+  background: var(--border);
+  border-radius: var(--radius-full);
+}
+
+html::-webkit-scrollbar-thumb:hover {
+  background: var(--border-light);
 }
 
 body {
